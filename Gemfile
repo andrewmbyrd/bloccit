@@ -30,11 +30,12 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'bootstrap-sass'
 
 group :development do
     gem 'sqlite3'
     gem 'listen'
-    
+
 end
 
 group :development, :test do
