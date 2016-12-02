@@ -21,6 +21,9 @@ require 'random_data'
    )
  end
 
+ my_post = Post.find_or_create_by(title:"There can be only one", body:"Surely, says I, surely there are no other posts like this.")
+ my_post.comments.find_or_create_by(body: "and this is the unique comment")
+
  puts "Seed finished"
  puts "#{Post.count} posts created"
  puts "#{Comment.count} comments created"
