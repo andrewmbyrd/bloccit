@@ -35,6 +35,7 @@ gem 'bootstrap-sass'
 group :development do
     gem 'sqlite3'
     gem 'listen'
+    gem 'pry-rails'
 
 end
 
