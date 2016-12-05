@@ -21,6 +21,10 @@ require 'random_data'
    )
  end
 
+Question.create!(title:"What color is sky?", body:"What color is it?", resolved: false)
+Question.create!(title:"Why was I made?", body:"Who made me?", resolved:false)
+
  puts "Seed finished"
  puts "#{Post.count} posts created"
+ puts "#{Question.count} questions posed"
  puts "#{Comment.count} comments created"

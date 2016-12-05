@@ -1,11 +1,5 @@
 Rails.application.routes.draw do
-  get 'posts/index'
-
-  get 'posts/show'
-
-  get 'posts/new'
-
-  get 'posts/edit'
+  resources :questions
 
   #we can refactor all of the GET methods for Post with the below
   #get 'post/index'
