@@ -1,11 +1,11 @@
 require 'random_data'
 
  # Create Posts
- 50.times do
+ 50.times do |num|
  # #1
    Post.create!(
  # #2
-     title:  RandomData.random_sentence,
+     title:  num % 5 ==0?  "SPAM": RandomData.random_sentence,
      body:   RandomData.random_paragraph
    )
  end
