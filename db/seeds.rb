@@ -21,6 +21,10 @@ require 'random_data'
    )
  end
 
+ Advertisement.create!(title:"The Fender Bender", body: "Use this to dent the heck out of all your friends' cars! Sounds like fun huh?", price:3000)
+ Advertisement.create!(title:"Cards for mom", body:"You never know what to get your mom for her b-day do you? Well now, we'll generate some generic, non-personal card for her!", price: 500)
+
  puts "Seed finished"
  puts "#{Post.count} posts created"
+ puts "#{Advertisement.count} Ads created"
  puts "#{Comment.count} comments created"
