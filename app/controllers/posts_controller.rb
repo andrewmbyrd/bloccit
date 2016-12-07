@@ -6,7 +6,7 @@ class PostsController < ApplicationController
 
   def new
     @topic = Topic.find(params[:topic_id])
-    @post = Post.new
+    @post = @topic.posts.new
   end
 
   def create
