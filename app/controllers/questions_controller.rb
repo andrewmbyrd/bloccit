@@ -22,12 +22,6 @@ class QuestionsController < ApplicationController
     end
   end
 
-  def resolve
-    @question = Question.find(params[:id])
-    return 0 if @question.resolved
-    return 1
-  end
-
   def show
     @question = Question.find(params[:id])
   end
@@ -40,6 +34,7 @@ class QuestionsController < ApplicationController
     @question = Question.find(params[:id])
     @question.title = params[:question][:title]
     @question.body = params[:question][:body]
+    @question.resolved = params[:question][:resolved]
 
     if @question.save
       flash[:notice] = "Post was saved."
