@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
+  get 'sponsored_posts/show'
+
+  get 'sponsored_posts/new'
+
+  get 'sponsored_posts/edit'
+
   resources :topics do
     resources :posts,except: [:index]
+    resources :sponsored_posts
   end
 
   #we can refactor all of the GET methods for Post with the below
@@ -9,7 +16,7 @@ Rails.application.routes.draw do
   #get 'post/new'
   #get 'post/edit'
 
-  
+
 
 
   #we don't need get welcome/index because it's the root
