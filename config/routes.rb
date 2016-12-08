@@ -5,7 +5,9 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new, :create]
 
-  
+  resources :sessions, only: [:new, :create, :destroy]
+
+
 
   #we can refactor all of the GET methods for Post with the below
   #get 'post/index'
