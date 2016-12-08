@@ -17,7 +17,7 @@ RSpec.describe SessionsController, type: :controller do
      end
 
      it "initializes a session" do
-       post :create, session: {email: my_user.email, password: my_user.password}
+       post :create, {session: email: my_user.email, password: my_user.password}
        expect(session[:user_id]).to eq my_user.id
      end
 
