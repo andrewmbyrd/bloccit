@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new, :create]
 
+  
+
   #we can refactor all of the GET methods for Post with the below
   #get 'post/index'
   #get 'post/show'
