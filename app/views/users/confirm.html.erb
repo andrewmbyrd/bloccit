@@ -7,6 +7,7 @@
 
 
 <div class = "side-to-side">
+  <%= params.inspect %>
   <%= button_to "Yes", {controller: "users", action: "create", params: params}, class: 'btn btn-success green' %>
   <%= link_to "No", new_user_path, class: 'btn btn-failure gray' %>
 </div>
