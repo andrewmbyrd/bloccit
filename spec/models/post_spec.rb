@@ -82,6 +82,16 @@ RSpec.describe Post, type: :model do
          expect(post.rank).to eq (old_rank - 1)
        end
      end
+
+     describe "#create_vote" do
+
+       it "will have 1 upvote on creation" do
+         the_post = topic.posts.create!(title: "herea", body: "andnowwemaybeupto twenty chars finally", user: user)
+         expect(the_post.up_votes).to eq 1
+       end
+
+
+     end
    end
 
 end
