@@ -4,17 +4,7 @@
   <div class="col-md-8">
 <!-- #7 -->
     <% @topics.each do |topic| %>
-      <div class="media">
-        <div class="media-body">
-          <h4 class="media-heading">
-<!-- #8 -->
-            <%= link_to topic.name, topic %>
-          </h4>
-          <small>
-            <%= topic.description %>
-          </small>
-        </div>
-      </div>
+      <%= render topic%>
     <% end %>
   </div>
   <% if user_is_super_authorized_for_topics? %>
@@ -23,3 +13,4 @@
   </div>
   <% end %>
 </div>
+Contact GitHub API Training Shop Blog About
