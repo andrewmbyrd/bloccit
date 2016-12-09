@@ -21,6 +21,7 @@ RSpec.describe SessionsController, type: :controller do
        expect(session[:user_id]).to eq my_user.id
      end
 
+
      it "does not add a user id to session due to missing password" do
        post :create, session: {email: my_user.email}
        expect(session[:user_id]).to be_nil
